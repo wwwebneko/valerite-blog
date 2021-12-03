@@ -1,6 +1,9 @@
 {
-  "id": 1638456267671,
+  "created": 1638456267671,
   "tags": ["start", "end"],
-  "text": "Hello world!"
+  "content": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed venenatis tortor. Duis eget semper lectus. Praesent scelerisque tristique enim, ut fermentum ex sagittis convallis. Aenean maximus nunc sem, non malesuada arcu sagittis nec. Proin sem tellus, vehicula sit amet dignissim a, tempus non justo. Praesent id blandit leo. Proin vel ex pellentesque, interdum ex non, congue elit. Aliquam erat volutpat. Sed et arcu dui. Cras et nulla in augue egestas facilisis non sed enim. Nam eu velit metus.",
 
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed venenatis tortor. Duis eget semper lectus. Praesent scelerisque tristique enim, ut fermentum ex sagittis convallis. Aenean maximus nunc sem, non malesuada arcu sagittis nec. Proin sem tellus, vehicula sit amet dignissim a, tempus non justo. Praesent id blandit leo. Proin vel ex pellentesque, interdum ex non, congue elit. Aliquam erat volutpat. Sed et arcu dui. Cras et nulla in augue egestas facilisis non sed enim. Nam eu velit metus."
+  ]
 }

@@ -1,0 +1,11 @@
+@import-normalize;
+@import 'styles/variables.scss';
+
+body {
+  margin: 0;
+  background-color: var(--base-color);
+  font-family: 'Merriweather', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { loadFiles } from './actions';
+import { loadFiles } from '../../actions/file';
 import index from '../../data/posts-index.json';
+import Post from '../Post';
 
 const POST_DIRECTORY = '/data';
 
@@ -34,14 +35,7 @@ export default function Pagination() {
   }
 
   function renderPosts() {
-    return posts.map( ({ id, text }) => {
-      return (
-        <div key={id}>
-          <p>{ (new Date(id)).toLocaleTimeString('UA')}</p>
-          <p>{ text }</p>
-        </div>
-      )
-    })
+    return posts.map(post => <Post key={post.created} { ...post } />)
   }
 
   return (

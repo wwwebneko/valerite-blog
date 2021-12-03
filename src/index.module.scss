@@ -1,0 +1,26 @@
+@import-normalize;
+@import 'styles/variables.scss';
+
+body {
+  position: relative;
+  padding: 10% 20%;
+  margin: 0;
+  color: var(--base-font-color);
+  font-family: 'Merriweather', serif;
+  line-height: 2;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::before {
+    position: absolute;
+    left: -3rem;
+    right: -2rem;
+    top: 0;
+    bottom: -1rem;
+    border: 4rem solid var(--accent-bg-color);
+    background-color: var(--base-bg-color);
+    content: '';
+    z-index: -1;
+  }
+}

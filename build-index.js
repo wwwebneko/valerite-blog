@@ -9,32 +9,35 @@ const COLOR_GREEN = "\x1b[32m";
 function validatePost(data, name) {
 
   let e = [];
-  const { id, tags, text } = data;
+  const { created, tags, content } = data;
 
   try {
 
-    if (!id) {
-      e.push('ID is missing');
+    if (!created) {
+      e.push('Created is missing');
     }
-    else if (!(new Date(id)).getTime() > 0) {
-      e.push('ID is not a number');
+    else if (!(new Date(created)).getTime() > 0) {
+      e.push('Created is not a number');
     }
 
     if (!tags) {
       e.push('Tags is missing');
     }
     else if (!Array.isArray(tags)) {
-      e.push('Tags is not a array')
+      e.push('Tags must be an array')
     }
     else if (tags.some(tag => typeof tag !== 'string')) {
-      e.push('Tag must be a string');
+      e.push('Tags must be an array of strings');
     }
 
-    if (!text) {
-      e.push('Text is missing')
+    if (!content) {
+      e.push('Content is missing')
     }
-    else if (typeof text !== 'string') {
-      e.push('Text must be a string')
+    else if (!Array.isArray(content)) {
+      e.push('Content must be an array')
+    }
+    else if (content.some(p => typeof p !== 'string')) {
+      e.push('Content must be an array of strings');
     }
     
     if (e.length) throw new Error(e.join(',\n'));
@@ -62,7 +65,7 @@ const main = async () => {
       const json = JSON.parse(cnt.toString());
 
       if (validatePost(json, name)) {
-        return { i: json.id, t: json.tags }
+        return { i: json.created, t: json.tags }
       };
 
       return null;
